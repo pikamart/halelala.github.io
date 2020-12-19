@@ -1,0 +1,1267 @@
+html {
+    font-size: 14px;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+ }
+ body {
+   background-color: #fff;
+   background-image: url("background_last.jpg");
+   background-size: auto;
+   padding: 0;
+   margin: 0;
+ }
+ *, *::before, *::after {
+   box-sizing: inherit;
+ }
+ 
+ // ########## Start of Snowflakes #######
+ div.dialogue, p, li {
+   opacity: 0;
+ }
+ .snowflake {
+   color: #fff;
+   font-size: 1em;
+   font-family: Arial, sans-serif;
+   text-shadow: 0 0 5px #000;
+ }
+ @keyframes snowflakes-fall{
+   0%{
+     top: -10%;
+     }
+   100%{
+     top: 100%;
+     }
+  }
+ @keyframes snowflakes-shake{
+   0%,100%{
+     transform: translateX(0);
+     }
+   50%{
+     transform: translateX(80px);
+     }
+   }
+ .snowflake{
+     position: fixed;
+     top: -10%;
+     z-index: 9999;
+     transition: ease;
+     -webkit-user-select: none;
+     -moz-user-select: none;
+     -ms-user-select: none;
+     user-select: none;
+     cursor: default;
+     -webkit-animation-name: snowflakes-fall,snowflakes-shake;
+     -webkit-animation-duration: 10s,3s;
+     -webkit-animation-timing-function: linear,ease-in-out;
+     -webkit-animation-play-state: running,running;
+     -webkit-animation-iteration-count: infinite,infinite;
+     animation-name: snowflakes-fall,snowflakes-shake;
+     animation-duration: 10s,3s;
+     animation-timing-function: linear,ease-in-out;
+     animation-iteration-count: infinite,infinite;
+     animation-play-state: running,running;
+     }
+ .snowflake:nth-of-type(0){
+     left: 1%;
+     -webkit-animation-delay: 0s,0s;
+     animation-delay: 0s,0s;
+ }   
+ .snowflake:nth-of-type(1){
+     left: 10%;
+     -webkit-animation-delay: 1.7s,1s;
+     animation-delay: 1.7s,1s;
+ }   
+ .snowflake:nth-of-type(2){
+     left: 20%;
+     -webkit-animation-delay: 6s,0.5s;
+     animation-delay: 6s,0.5s;
+ }  
+ .snowflake:nth-of-type(3){
+   left: 30%;
+   -webkit-animation-delay: 4s,2s;
+   animation-delay: 4s,2s;
+ } 
+ .snowflake:nth-of-type(4){
+   left: 40%;
+   -webkit-animation-delay: 2.3s,2s;
+   animation-delay: 2.3s,2s;
+ }
+ .snowflake:nth-of-type(5){
+   left: 50%;
+   -webkit-animation-delay: 8s,3s;
+   animation-delay: 8s,3s;
+ }
+ .snowflake:nth-of-type(6){
+   left: 60%;
+   -webkit-animation-delay: 5.5s,2s;
+   animation-delay: 5.5s,2s;
+ }
+ .snowflake:nth-of-type(7){
+   left: 70%;
+   -webkit-animation-delay: 2.5s,1s;
+   animation-delay: 2.5s,1s;
+ }
+ .snowflake:nth-of-type(8){
+   left: 80%;
+   -webkit-animation-delay: 1s,0s;
+   animation-delay: 1s,0s;
+ }
+ .snowflake:nth-of-type(9){
+   left: 90%;
+   -webkit-animation-delay: 3s,1.5s;
+   animation-delay: 3s,1.5s;
+ }
+ .snowflake:nth-of-type(10){
+   left: 25%;
+   -webkit-animation-delay: 2s,0s;
+   animation-delay: 2s,0s;
+ }
+ .snowflake:nth-of-type(11){
+   left: 65%;
+   -webkit-animation-delay: 9.7s,2.5s;
+   animation-delay: 9.7s,2.5s;
+ }
+ .snowflake:nth-of-type(12){
+   left: 75%;
+   -webkit-animation-delay: 4.5s,2.5s;
+   animation-delay: 4.5s,2.5s;
+ }
+ .snowflake:nth-of-type(13){
+   left: 16%;
+   -webkit-animation-delay: 3.5s,1.5s;
+   animation-delay: 3.5s,1.5s;
+ }
+ .snowflake:nth-of-type(14){
+   left: 48%;
+   -webkit-animation-delay: 1.5s,0s;
+   animation-delay: 1.5s,0s;
+ }
+ .snowflake:nth-of-type(15){
+   left: 13%;
+   -webkit-animation-delay: 7s,2.5s;
+   animation-delay: 7s,2.5s;
+ }
+ .snowflake:nth-of-type(16){
+   left: 26%;
+   -webkit-animation-delay: 3, 2.5s;
+   animation-delay: 3, 2.5s;
+ }
+ 
+ // ######## End of Snowflake #################
+ 
+ .col-1 {width: 8.33%;}
+ .col-2 {width: 16.66%;}
+ .col-3 {width: 25%;}
+ .col-4 {width: 33.33%;}
+ .col-5 {width: 41.66%;}
+ .col-6 {width: 50%;}
+ .col-7 {width: 58.33%;}
+ .col-8 {width: 66.66%;}
+ .col-9 {width: 75%;}
+ .col-10 {width: 83.33%;}
+ .col-11 {width: 91.66%;}
+ .col-12 {width: 100%;}
+ 
+ .row {
+   width: 100%;
+   height: 100vh;
+   display: flex;
+   flex-wrap: wrap;
+   position: relative;
+   overflow: hidden;
+ }
+ .row::after {
+   content: "";
+   display: table;
+   clear: both;
+ }
+ svg {
+   position: absolute;
+   bottom: 0;
+ }
+ img, .merry-text {
+   opacity: 0;
+ }
+ // ################ Start of Mobile ################
+ @media screen and(max-width: 400px) {
+   li, p {
+     opacity: 1;
+   }
+   svg {
+     position: absolute;
+     bottom: 170px;
+   }
+   svg.svg-two {
+     position: absolute;
+     bottom: 90px;
+     box-shadow: 0 0 30px 50px rgba(255, 255, 255, 1);
+     border-radius: 30%;
+     opacity: .2;
+   }
+   .white {
+     width: 100%;
+     position: absolute;
+     bottom: 0;
+     height: 180px;
+     background:linear-gradient(to bottom, white, rgb(182, 196, 202));
+   }
+   div.merry-text {
+     position: absolute;
+     opacity: 1;
+     font-family: 'Mountains of Christmas', cursive;
+     font-size: 2.3rem;
+     color: #fff;
+     text-shadow: 2px 2px 7px rgb(252, 235, 0);
+     left: 25%;
+     top: 20%;
+   }
+ 
+ // ########### Start of Tree #############
+ div.tree-container {
+   position: absolute;
+   bottom: 440px;
+   left: -10px;
+ }
+ div.tree {
+   width: 200px;
+   height: 240px;
+   position: absolute;
+   z-index: 5;
+   transform: skewY(-2deg);
+   transition: ease;
+ }
+ div.tree img.christmas-tree {
+   position: absolute;
+   opacity: 1;
+   width: 230px;
+   top: 24px;
+   left: 14px;
+ }
+ div.tree-lights {
+   position: absolute;
+   z-index: 3;
+ }
+ div.tree-lights ul li {
+   list-style: none;
+   position: absolute;
+   width: 6px;
+   height: 9px;
+   border-radius: 100%;
+   transition: ease;
+   -webkit-animation-duration: 1.3s;
+   -webkit-animation-fill-mode: both; 
+   -webkit-animation-iteration-count: infinite;
+   -webkit-animation-timing-function: linear,ease-in-out;
+   -webkit-animation-play-state: running,running;
+   animation-duration: 1.3s;
+   animation-fill-mode: both; 
+   animation-timing-function: linear, ease-in-out;
+   animation-play-state: running, running;
+   animation-iteration-count: infinite;
+ }
+ div.tree-lights ul li::before {
+   content: "";
+   position: absolute;
+   width: 6px;
+   height: 3px;
+   background-color: rgb(15, 15, 15);
+   border-radius: 4px;
+ }
+ div.tree-lights ul li:nth-child(1){
+   top: 82px;
+   left: 70px;
+   -webkit-animation-name: flash-one;
+   animation-name: flash-one;
+ }
+ div.tree-lights ul li:nth-child(2){
+   top: 82px;
+   left: 183px;
+   -webkit-animation-name: flash-two;
+   animation-name: flash-two;
+ }
+ div.tree-lights ul li:nth-child(3){
+   top: 114px;
+   left: 55px;
+   -webkit-animation-name: flash-two;
+   animation-name: flash-two;
+ }
+ div.tree-lights ul li:nth-child(4){
+   top: 114px;
+   left: 197px;
+   -webkit-animation-name: flash-one;
+   animation-name: flash-one;
+ }
+ div.tree-lights ul li:nth-child(5){
+   top: 140px;
+   left: 43px;
+   -webkit-animation-name: flash-one;
+   animation-name: flash-one;
+ }
+ div.tree-lights ul li:nth-child(6){
+   top: 140px;
+   left: 210px;
+   -webkit-animation-name: flash-two;
+   animation-name: flash-two;
+ }
+ div.tree-lights ul li:nth-child(7){
+   top: 167px;
+   left: 29px;
+   -webkit-animation-name: flash-two;
+   animation-name: flash-two;
+ }
+ div.tree-lights ul li:nth-child(8){
+   top: 167px;
+   left: 224px;
+   -webkit-animation-name: flash-one;
+   animation-name: flash-one;
+ }
+ div.tree-lights ul li:nth-child(9){
+   top: 195px;
+   left: 16px;
+   -webkit-animation-name: flash-one;
+   animation-name: flash-one;
+ }
+ div.tree-lights ul li:nth-child(10){
+   top: 195px;
+   left: 236px;
+   -webkit-animation-name: flash-two;
+   animation-name: flash-two;
+ }
+ @keyframes flash-one {
+   0%, 100% {
+     background: rgba(255, 0, 0, 1);
+     box-shadow: 0 1px 20px 2px rgba(255, 0, 0, 1);
+   }
+   50% {
+     background: rgba(255, 0, 0, .5);
+     box-shadow: 0 1px 20px 4px rgba(255, 0, 0, .7);
+   }
+ }
+ @keyframes flash-two {
+   50% {
+     background: rgb(232, 236, 0);
+     box-shadow: 0 1px 20px 4px rgba(232, 236, 0, .7);
+   }
+   0%, 100% {
+     background: rgba(232, 236, 0, .5);
+     box-shadow: 0 1px 20px 2px rgba(232, 236, 0, .3);
+   }
+ }
+ .sway {
+   -webkit-animation-name: sway;
+   -webkit-animation-iteration-count: infinite;
+   -webkit-animation-duration: 10s;
+   animation-name: sway;
+   animation-iteration-count: infinite;
+   animation-duration: 10s;
+ }
+ @keyframes sway {
+   50% {transform: skewY(2deg); }
+ }
+ div.tree-container .trunk {
+   position: absolute;
+   bottom: -239px;
+   left: 104px;
+   border-left: 23px solid transparent;
+   border-right: 23px solid transparent;
+   border-bottom: 80px solid #603913;
+   z-index: 1;
+ }
+ div.tree a.mid-button::before {
+   content: "";
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 11px;
+   height: 11px;
+   background-color: crimson;
+   border-radius: 100%;
+   border: 1px solid rgb(151, 11, 39);
+ }
+ div.tree a.mid-button {
+   position: absolute;
+   top: 218px;
+   left: 117px;
+   width: 20px;
+   height: 20px;
+   border-radius: 100%;
+   border: 1px solid rgb(99, 99, 99);
+   background-color:rgb(155, 155, 155);
+   box-shadow: inset 0 0 10px 2px rgba(255, 255, 255, 0.5);
+   z-index: 6;
+ }
+ 
+ div.tree * {
+   position: absolute;
+ }
+ // #################### End of Tree ###################
+ // ################ Start of Tree Shadow ##############
+ div.tree-shadow-container {
+   position: absolute;
+   left: 211px;
+   bottom: 443px;
+   transform: skewX(-40deg);
+   z-index: 1;
+   transition: ease;
+   opacity: .2;
+ }
+ div.tree-shadow {
+   position: absolute;
+   width: 200px;
+   height: 240px;
+   z-index: 1;
+   transform-origin: bottom;
+   transform: rotateX(180deg);
+ }
+ div.tree-shadow img.christmas-tree-shadow {
+   opacity: 1;
+   position: absolute;
+   width: 230px;
+   top: 30px;
+ }
+ div.tree-shadow .trunk {
+   bottom: 1px;
+   left: 43%;
+   border-left: 23px solid transparent;
+   border-right: 23px solid transparent;
+   border-top: 90px solid transparent;
+   border-bottom: 80px solid var(--tree-shadow);
+   z-index: -1;
+ }
+ div.tree-shadow * {
+   position: absolute;
+ }
+ // ########### End of Tree Shadow ##############
+ 
+ 
+   // ########## Start of Sparkles ##########
+   .contain {
+     position: absolute;
+   }
+   .up {
+     position: absolute;
+     width: 1px;
+     height: 5px;
+     background-color: rgb(255, 255, 255);
+     box-shadow: 0 0 13px 1px rgba(255, 255, 255, .7);
+     border-radius: 100%;
+   }
+   .down {
+     position: absolute;
+     width: 1px;
+     height: 5px;
+     background-color: rgb(255, 255, 255);
+     box-shadow: 0 0 13px 1px rgba(255, 255, 255, .7);
+     border-radius: 100%;
+     transform: rotate(90deg);
+   }
+   div.contain:nth-of-type(1) {
+     left: 58px;
+     top: 50px;
+   }
+   div.contain:nth-of-type(2) {
+     left: 77px;
+     top: 250px;
+   }
+   div.contain:nth-of-type(3) {
+     left: 153px;
+     top: 170px;
+   }
+   div.contain:nth-of-type(4) {
+     left: 161px;
+     top: 360px;
+   }
+   div.contain:nth-of-type(5) {
+     left: 50px;
+     top: 438px;
+   }
+   div.contain:nth-of-type(6) {
+     left: 345px;
+     top: 263px;
+   }
+   div.contain:nth-of-type(7) {
+     left: 321px;
+     top: 463px;
+   }
+   div.contain:nth-of-type(8) {
+     left: 301px;
+     top: 403px;
+   }
+   div.contain:nth-of-type(9) {
+     left: 233px;
+     top: 300px;
+   }
+   div.moon {
+     position: absolute;
+     width: 80px;
+     height: 80px;
+     background: linear-gradient(to right,white ,rgb(190, 213, 255));
+     box-shadow: inset -12px 0px 0 0px #9098a1;
+     left: 280px;
+     top: 50px;
+     border-radius: 100%;
+     transition: ease;
+     -webkit-animation-name: moon-rotate;
+     -webkit-animation-iteration-count: infinite;
+     -webkit-animation-duration: 400s;
+     -webkit-animation-timing-function: linear,ease-in-out;
+     -webkit-animation-play-state: running,running;
+     animation-timing-function: linear, ease-in-out;
+     animation-play-state: running, running;
+     animation-name: moon-rotate;
+     animation-iteration-count: infinite;
+     animation-duration: 400s;
+   }
+   div.moon div.moon-shadow {
+     position: absolute;
+     width: 80px;
+     top: 0;
+     height: 80px;
+     border-radius: 100%;
+     box-shadow: 0 0 90px 70px rgba(255, 255, 255, .3);
+     z-index: -1;
+   }
+   div.moon ul li {
+     position: absolute;
+     list-style: none;
+     background-color: #737277;
+     border-radius: 100%;
+     opacity: .7;
+   }
+   div.moon li:nth-child(1) {
+     left: 10%;
+     top: 40%;
+     width: 27%;
+     height: 27%;
+     box-shadow: inset 6px -2px 0 0px #414043;
+   }
+   div.moon li:nth-child(2) {
+     left: 70%;
+     top: 20%;
+     width: 20%;
+     height: 20%;
+     box-shadow: inset 3px -1px 0 0px #414043;
+   }
+   div.moon li:nth-child(3) {
+     left: 50%;
+     top: 80%;
+     width: 10%;
+     height: 10%;
+     box-shadow: inset 3px -1px 0 0px #414043;
+   }
+   div.moon li:nth-child(4) {
+     left: 68%;
+     top: 63%;
+     width: 14%;
+     height: 14%;
+     box-shadow: inset 2.4px -0.8px 0 0px #414043;
+   }
+   div.moon li:nth-child(5) {
+     left: 30%;
+     top: 10%;
+     width: 11%;
+     height: 11%;
+     box-shadow: inset 2.4px -0.8px 0 0px #414043;
+   }
+   div.moon li:nth-child(6) {
+     left: 46%;
+     top: 50%;
+     width: 12%;
+     height: 12%;
+     box-shadow: inset 2.4px -0.8px 0 0px #414043;
+   }
+   div.moon li:nth-child(7) {
+     left: 181.81818182px;
+     top: 100px;
+     width: 12.5px;
+     height: 12.5px;
+     box-shadow: inset 2.4px -0.8px 0 0px #414043;
+   }
+   @keyframes moon-rotate{
+     50% {
+       transform: rotate(360deg);
+     }
+   }
+   // ########### End of Sparkles ##############
+ 
+   
+   // ########## Start of Penguin ##########
+ .penguin {
+   position: absolute;
+   bottom: 100px;
+   left: 200px;
+   width: var(--penguin-size, 200px);
+   height: var(--penguin-size, 200px);
+   z-index: 1;
+ }
+ .penguin * {
+   -webkit-animation-timing-function: linear,ease-in-out;
+   -webkit-animation-play-state: running,running;
+   -webkit-animation-iteration-count: infinite;
+   animation-iteration-count: infinite;
+   animation-timing-function: linear, ease-in-out;
+   animation-play-state: running, running;
+ }
+ .dialogue {
+   position: absolute;
+   height: 35px;
+   width: 90px;
+   background-color: rgb(114, 114, 114);
+   border-radius: 10px;
+   top: -30px;
+   left: -10px;
+   padding-left: 2px;
+   padding-right: 2px;
+   opacity: 0;
+   color: white;
+   transition: ease;
+   transform: rotate(0deg);
+   transform-origin: bottom;
+   -webkit-animation-name: dia-change;
+   -webkit-animation-duration: 10s;
+   animation-name: dia-change;
+   animation-duration: 10s;
+ }
+ @keyframes dia-change {
+   50% {opacity: 1;}
+ }
+ .dialogue::after {
+   content: "";
+   position: absolute;
+   width: 0;
+   height: 0;
+   border: 10px solid transparent;
+   border-top-color: rgb(114, 114, 114);
+   border-right: 0;
+   border-bottom: 0;
+   bottom: 0;
+   left: 35px;
+   margin-bottom: -9px;
+ }
+ .right-cheek {
+   top: 15%;
+   left: 35%;
+   background: var(--penguin-belly, white);
+   width: 60%;
+   height: 70%;
+   border-radius: 70% 70% 60% 60%;
+ }
+ .left-cheek {
+   top: 15%;
+   left: 5%;
+   background: var(--penguin-belly, white);
+   width: 60%;
+   height: 70%;
+   border-radius: 70% 70% 60% 60%;
+ }
+ .belly {
+   top: 60%;
+   left: 2.5%;
+   background: var(--penguin-belly, white);
+   width: 95%;
+   height: 100%;
+   border-radius: 120% 120% 100% 100%;
+ }
+ .penguin-top {
+   top: 10%;
+   left: 25%;
+   background: var(--penguin-skin, gray);
+   width: 50%;
+   height: 45%;
+   border-radius: 70% 70% 60% 60%;
+ }
+ .penguin-bottom {
+   top: 40%;
+   left: 23.5%;
+   background: var(--penguin-skin, gray);
+   width: 53%;
+   height: 45%;
+   border-radius: 70% 70% 100% 100%;
+ }
+ .right-hand {
+   top: 5%;
+   left: 25%;
+   background: var(--penguin-skin, black);
+   width: 30%;
+   height: 60%;
+   border-radius: 30% 30% 120% 30%;
+   transform: rotate(130deg);
+   z-index: 0;
+   transform-origin:0% 0%;
+   -webkit-animation-duration: 3s;
+   -webkit-animation-name: wave;
+   -webkit-animation-timing-function: linear;
+   -webkit-animation-duration: 3s;
+   animation-duration: 3s;
+   animation-name: wave;
+   animation-iteration-count: infinite;
+   animation-timing-function: linear;
+ }
+ .left-hand {
+   top: 0%;
+   left: 75%;
+   background: var(--penguin-skin, gray);
+   width: 30%;
+   height: 60%;
+   border-radius: 30% 30% 30% 120%;
+   transform: rotate(-45deg);
+   z-index: -1;
+ }
+ .right-feet {
+   top: 85%;
+   left: 60%;
+   background: var(--penguin-beak, orange);
+   width: 15%;
+   height: 30%;
+   border-radius: 50% 50% 50% 50%;
+   transform: rotate(-80deg);
+   z-index: -2222;
+ }
+ .left-feet {
+   top: 85%;
+   left: 25%;
+   background: var(--penguin-beak, orange);
+   width: 15%;
+   height: 30%;
+   border-radius: 50% 50% 50% 50%;
+   transform: rotate(80deg);
+   z-index: -2222;
+ }
+ .right-eye {
+   top: 45%;
+   left: 60%;
+   background: black;
+   width: 15%;
+   height: 17%;
+   border-radius: 50%;
+ }
+ .left-eye {
+   top: 45%;
+   left: 25%;
+   background: black;
+   width: 15%;
+   height: 17%;
+   border-radius: 50%;
+ }
+ .sparkle {
+   top: 25%;
+   left:-23%;
+   background: white;
+   width: 150%;
+   height: 100%;
+   border-radius: 50%;
+ }
+ .blush-right {
+   top: 65%;
+   left: 15%;
+   background: pink;
+   width: 15%;
+   height: 10%;
+   border-radius: 50%;
+ }
+ .blush-left {
+   top: 65%;
+   left: 70%;
+   background: pink;
+   width: 15%;
+   height: 10%;
+   border-radius: 50%;
+ }
+ .beak-top {
+   top: 60%;
+   left: 40%;
+   background: var(--penguin-beak, orange);
+   width: 20%;
+   height: 10%;
+   border-radius: 50%;
+ }
+ .beak-bottom {
+   top: 65%;
+   left: 42%;
+   background: var(--penguin-beak, orange);
+   width: 16%;
+   height: 10%;
+   border-radius: 50%;
+ }
+ .penguin * {
+   position: absolute;
+ }
+ @keyframes wave {
+   10% {
+     transform: rotate(110deg);
+   }
+   20% {
+     transform: rotate(130deg);
+   }
+   30% {
+     transform: rotate(110deg);
+   }
+   40% {
+     transform: rotate(130deg);
+   }
+ }
+ // ################### End of Penguin    #################
+ 
+ 
+ // ################# Start of Penguin Shadow ################
+ .penguin-shadow-container {
+   position: absolute;
+   bottom: 210px;
+   left: 285px;
+   transform: skewX(-40deg);
+   z-index: 2;
+   opacity: 0.2;
+ }
+ .penguin-shadow {
+   position: absolute;
+   width: var(--penguin-size, 200px);
+   height: var(--penguin-size, 200px);
+   z-index: 1;
+   transform-origin: bottom;
+   transform: rotateX(180deg);
+ }
+ .penguin-top-shadow {
+   top: 10%;
+   left: 25%;
+   background: var(--penguin-shadow, rgb(63, 63, 63));
+   width: 50%;
+   height: 45%;
+   border-radius: 70% 70% 60% 60%;
+ }
+ .penguin-bottom-shadow {
+   top: 40%;
+   left: 23.5%;
+   background: var(--penguin-shadow, rgb(63, 63, 63));
+   width: 53%;
+   height: 45%;
+   border-radius: 70% 70% 100% 100%;
+ }
+ .right-hand-shadow {
+   top: 5%;
+   left: 25%;
+   background: var(--penguin-shadow, rgb(63, 63, 63));
+   width: 30%;
+   height: 60%;
+   border-radius: 30% 30% 120% 30%;
+   transform: rotate(130deg);
+   z-index: 0;
+   transform-origin:0% 0%;
+   transition: ease;
+   -webkit-animation-duration: 3s;
+   -webkit-animation-name: wave;
+   -webkit-animation-iteration-count: infinite;
+   -webkit-animation-timing-function: linear;
+   -webkit-animation-play-state: running, running;
+   animation-play-state: running, running;
+   animation-duration: 3s;
+   animation-name: wave;
+   animation-iteration-count: infinite;
+   animation-timing-function: linear;
+ }
+ .left-hand-shadow {
+   top: 0%;
+   left: 75%;
+   background: var(--penguin-shadow, rgb(63, 63, 63));
+   width: 30%;
+   height: 60%;
+   border-radius: 30% 30% 30% 120%;
+   transform: rotate(-45deg);
+   z-index: -1;
+ }
+ .right-feet-shadow {
+   top: 85%;
+   left: 60%;
+   background: var(--penguin-shadow, rgb(63, 63, 63));
+   width: 15%;
+   height: 30%;
+   border-radius: 50% 50% 50% 50%;
+   transform: rotate(-80deg);
+   z-index: -2222;
+ }
+ .left-feet-shadow {
+   top: 85%;
+   left: 25%;
+   background: var(--penguin-shadow, rgb(63, 63, 63));
+   width: 15%;
+   height: 30%;
+   border-radius: 50% 50% 50% 50%;
+   transform: rotate(80deg);
+   z-index: -2222;
+ }
+ .penguin-shadow * {
+   position: absolute;
+ }
+ // ################## End of Penguin Shadow ##################
+ 
+ 
+ // ################## Start of Mailbox ###################
+ div.mail-container {
+   position: absolute;
+   left: 260px;
+   bottom: 150px;
+   height: 110px;
+   width: 100px;
+ }
+ div.mailbox {
+   position: absolute;
+   height: 110px;
+   width: 100px;
+   transform-origin: bottom;
+   z-index: 5;
+ }
+ div.mailbox div.mail-outside {
+   width: 50px;
+   height: 50px;
+   background-color: crimson;
+   border-radius: 45% 45% 0 0;
+   border: 1px solid black;
+   bottom: 58px;
+   left: 31px;
+   z-index: 4;
+ }
+ div.mailbox a.mail-cover {
+   width: 35px;
+   height: 40px;
+   background-color: #fff;
+   border-radius: 50% 50% 0 0;
+   border: 1px solid rgb(0, 0, 0);
+   left: 38px;
+   bottom: 60px;
+   z-index: 6;
+   transform-origin: bottom;
+   transition: all 1s 2s ease;
+   transform: rotateX(0deg);
+ }
+ #knob {
+   width: 7px;
+   height: 7px;
+   background: radial-gradient(black, rgb(177, 59, 59));
+   left: 20px;
+   top: 20px;
+   border-radius: 100%;
+ }
+ div.mailbox div.mail-inside-shadow {
+   width: 35px;
+   height: 40px;
+   background: linear-gradient(to bottom, rgb(95, 95, 95), rgb(128, 113, 116));
+   box-shadow: inset 10px 10px 10px 10px rgba(0, 0, 0, .15);
+   border-radius: 50% 50% 0 0;
+   border: 1px solid rgb(0, 0, 0);
+   left: 38px;
+   bottom: 60px;
+   z-index: 5;
+ }
+ div.mailbox div.mail-hanger {
+   left: 81px;
+   top: 1px;
+   transform: rotate(27deg);
+ }
+ div.mailbox div.hanger-long {
+   background-color: yellow;
+   box-shadow: inset 0 0 10px 2px rgba(255, 0, 0, .2);
+   width: 8px;
+   height: 35px;
+ }
+ div.mailbox div.hanger-short {
+   background-color: yellow;
+   box-shadow: inset 0 0 10px 2px rgba(255, 0, 0, .2);
+   width: 20px;
+   height: 9px;
+ }
+ div.mailbox div.mail-stand {
+   width: 10px;
+   height: 60px;
+   background-color: #603913;
+   bottom: 0;
+   left: 50px;
+ }
+ div.mailbox * {
+   position: absolute;
+ }
+ // ################## End of Mailbox ######################
+ 
+ 
+ // ################## Start of Mailbox Shadow #############
+ div.mailbox-shadow-container1{
+   position: absolute;
+   left: 5px;
+   transform: skewX(-5deg);
+   bottom: 0px;
+   z-index: 2;
+   opacity: .2;
+   height: 120px;
+   width: 100px;
+ }
+ div.mailbox-shadow-container2 {
+   position: absolute;
+   transform-origin: bottom;
+   transform: rotateX(180deg);
+   height: 120px;
+   width: 100px;
+ }
+ div.mailbox-shadow {
+   position: absolute;
+   height: 120px;
+   width: 100px;
+   z-index: 2;
+   transform-origin: bottom;
+ }
+ div.mailbox-shadow div.mail-outside-shadow {
+   width: 50px;
+   height: 50px;
+   background-color: var(--mailbox-shadow, rgb(63, 63, 63));
+   border-radius: 45% 45% 0 0;
+   bottom: 58px;
+   left: 31px;
+   z-index: 4;
+ }
+ div.mailbox-shadow a.mail-cover-shadow {
+   width: 35px;
+   height: 40px;
+   background-color: var(--mailbox-shadow, rgb(63, 63, 63));
+   border-radius: 50% 50% 0 0;
+   left: 38px;
+   bottom: 60px;
+   z-index: 6;
+   transform-origin: bottom;
+   transition: all 1s 2s ease;
+   transform: rotateX(0deg);
+ }
+ div.mailbox-shadow div.mail-hanger-shadow {
+   left: 81px;
+   top: 10px;
+   transform: rotate(27deg);
+ }
+ div.mailbox-shadow div.hanger-long-shadow {
+   background-color: var(--mailbox-shadow, rgb(63, 63, 63));
+   width: 8px;
+   height: 35px;
+ }
+ div.mailbox-shadow div.hanger-short-shadow {
+   background-color:var(--mailbox-shadow, rgb(63, 63, 63));
+   width: 20px;
+   height: 9px;
+ }
+ div.mailbox-shadow div.mail-stand-shadow {
+   width: 10px;
+   height: 60px;
+   background-color: var(--mailbox-shadow, rgb(63, 63, 63));
+   bottom: 0;
+   left: 50px;
+ }
+ div.mailbox-shadow * {
+   position: absolute;
+ }
+ // ################### End of Mailbox Shadow ##################
+ 
+ 
+ // #################### Start of Mail Letter #################
+ .mail {
+   position: absolute;
+   width: 6vw;
+   height: 4vw;
+   bottom: 65px;
+   left: 45px;
+   background-color: #e04848;
+   transform-style: preserve-3d;
+   transform: rotateX(90deg);
+   opacity: 0;
+   transition: all 2s ease;
+   z-index: 5;
+ }
+ .mail::before {
+   content: "";
+   border-left: var(--mail-border-lr) solid #ca4d4d;
+   border-right: var(--mail-border-lr) solid transparent;
+   border-top: var(--mail-border-tb) solid transparent;
+   border-bottom: var(--mail-border-tb) solid transparent;
+   z-index: 5;
+   transition: all 2s ease;
+ }
+ .mail::after {
+   content: "";
+   border-left: var(--mail-border-lr) solid transparent;
+   border-right: var(--mail-border-lr) solid #cf6e6e;
+   border-top: var(--mail-border-tb) solid transparent;
+   border-bottom: var(--mail-border-tb) solid #cf6e6e;
+   z-index: 5;
+   transition: all 2s ease;
+ }
+ div.mail a.cover {
+   border-left: var(--mail-border-lr) solid transparent;
+   border-right: var(--mail-border-lr) solid transparent;
+   border-top: var(--mail-border-tb) solid var(--mail-cover-color);
+   border-bottom: var(--mail-border-tb) solid transparent;
+   z-index: 7;
+   transition: all 2s ease;
+ }
+ .letter {
+   width: 5vw;
+   height: 3vw;
+   background-color: white;
+   left: 5px;
+   border-radius: 10px;
+   z-index: 1;
+   transition: all 2s ease;
+ }
+ #prevbtn {
+     left: 0;
+     bottom: -220px;
+     z-index: 11;
+ }
+ #nextbtn {
+     right: 0;
+     bottom: -220px;
+     z-index: 11;
+ }
+ .inner-letter,
+ .inner-letter-container{
+   width: 5vw;
+   height: 3vw;
+   background-color: rgb(255, 255, 244);
+   border-radius: 10px;
+   transition: all 2s ease;
+   z-index: 10;
+ }
+ .inner-letter-container {
+     overflow: hidden;
+ }
+ .inner-letter p {
+   background-color: rgb(255, 255, 244);
+   font-size: 15px;
+   text-shadow: 0 0 1px rgba(0, 0, 0, .4);
+   line-height: 20px;
+   padding: 0 5px;
+   text-align: justify;
+   position:  relative !important;
+   z-index: 20;
+ }
+ div.mail *, *::before, *::after {
+   position: absolute;
+ }
+ // ################## End of mail letter ####################
+ 
+ 
+ // ############ Start of Mailbox First Phase responsive ###########
+ div.mail-container.first a.mail-cover{
+   transition: all 1s ease;
+   transform: rotateX(180deg);
+ }
+ div.mail-container.first a.mail-cover-shadow{
+   transition: all 1s ease;
+   transform: rotateX(180deg);
+ }
+ div.mail-container.first div.mail {
+   width: 86vw;
+   height: 36vw;
+   left: -235px;
+   bottom: 250px;
+   opacity: 1;
+   transform: rotateX(0deg);
+   transition: all 3s 1s ease;
+ }
+ div.mail-container.first div.mail::before {
+   border-left: var(--mail-border-final-lr) solid #d82c2c;
+   border-right: var(--mail-border-final-lr) solid transparent;
+   border-top: var(--mail-border-final-tb) solid transparent;
+   border-bottom: var(--mail-border-final-tb) solid transparent;
+   transition: all 3s 1s ease;
+ }
+ div.mail-container.first div.mail::after {
+   border-left: var(--mail-border-final-lr) solid transparent;
+   border-right: var(--mail-border-final-lr) solid #cc0000;
+   border-top: var(--mail-border-final-tb) solid transparent;
+   border-bottom: var(--mail-border-final-tb) solid #cc0000;
+   transition: all 3s 1s ease;
+ }
+ div.mail-container.first div.mail a.cover {
+   border-left: var(--mail-border-final-lr) solid transparent;
+   border-right: var(--mail-border-final-lr) solid transparent;
+   border-top: var(--mail-border-final-tb) solid #e23737;
+   border-bottom: var(--mail-border-final-tb) solid transparent;
+   transition: all 3s 1s ease;
+   transform-origin: top;
+   transform: rotateX(0deg);
+ }
+ div.mail-container.first div.letter {
+   width: 82vw;
+   height: 25vw;
+   top: 10px;
+   left: 5px;
+   transition: all 3s 1s ease;
+ }
+ div.mail-container.first div.letter div.inner-letter-container {
+    transition: all 3s 1s ease;
+    width: 82vw;
+    height: 3vw;
+ }
+ div.mail-container.first div.letter div.inner-letter {
+   transition: all 3s 1s ease;
+   width: 82vw;
+   height: 3vw;
+   display: flex;
+ }
+ div.mail-container.first div.letter div.inner-letter p {
+     min-width: 100%;
+ }
+ div.mail-container.first .letter.lela {
+   transition: all 2s ease;
+ }
+ 
+ // ############ End of Mailbox First Phase responsive ############
+ 
+ 
+ // ############ Start of Mailbox Last Phase responsive ############
+ 
+ div.mail-container.first.last div.mail a.cover {
+   transition: all 1s ease;
+   transform: rotateX(180deg);
+   z-index: 7;
+ }
+ div.mail-container.first.last div.mail div.letter {
+   transition: all 1s 1s ease;
+   z-index: 8;
+   top: -130px;
+ }
+ div.mail-container.first.last div.mail div.letter div.inner-letter-container {
+   transition: all 5s 2s ease;
+   height: 160vw;
+   position: relative !important;
+ }
+ div.mail-container.first.last div.mail div.letter div.inner-letter {
+   transition: all 5s 2s ease;
+   height: 160vw;
+   position: relative !important;
+ }
+
+ div.mail-container.first.last div.mail a.fold {
+   position: none;
+   text-decoration: underline;
+ }
+ // ############ End of Mailbox Last Phase responsive #############
+ 
+ 
+ // ################# Start of Mail Last Phase ####################
+ div.mail-container.first.last div.mail.last div.letter div.inner-letter-container {
+    transition: all 5s ease;
+    height: 3vw;
+ }
+ div.mail-container.first.last div.mail.last div.letter div.inner-letter {  
+   transition: all 5s ease;
+   height: 3vw;
+ }
+ div.mail-container.first.last div.mail.last div.letter {
+   transition: all 1s 5s ease;
+   z-index: 1;
+   top: 10px;
+ }
+ div.mail-container.first.last div.mail.last a.cover {
+   transition: 1s 6s ease;
+   transform: rotateX(0deg);
+ }
+ // ################ End of Mail Last Phase ###################
+ 
+ 
+ } // ################## End of Mobile #####################
+ 

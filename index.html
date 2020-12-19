@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merry Christmas</title>
+    <link rel="stylesheet" href="dest/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="row">
+      <!-- <div class="merry-text">Merry Christmas</div>
+      <div class="snowflakes" aria-hidden="true">
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❆</div>
+      </div> -->
+
+      <div class="tree-container">
+        <div class="tree sway">
+          <img src="dest/tree1.png" class="christmas-tree">
+          <div class="tree-lights">
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+          <a class="mid-button" href="javascript:void(0);" 
+          onclick="toggle_sound()"></a>
+        </div>
+        <div class="trunk"></div>
+      </div>
+      <div class="tree-shadow-container">
+        <div class="tree-shadow">
+          <img src="dest/tree_shadow.png" class="christmas-tree-shadow sway">
+          <div class="trunk"></div>
+        </div>
+      </div>
+
+      <div class="sparkles">
+        <div class="light">
+          <div class="contain">
+            <div class="up"></div>
+            <div class="down"></div>
+          </div>
+          <div class="contain">
+            <div class="up"></div>
+            <div class="down"></div>
+          </div>
+          <div class="contain">
+            <div class="up"></div>
+            <div class="down"></div>
+          </div>
+          <div class="contain">
+            <div class="up"></div>
+            <div class="down"></div>
+          </div>
+          <div class="contain">
+            <div class="up"></div>
+            <div class="down"></div>
+          </div>
+          <div class="contain">
+            <div class="up"></div>
+            <div class="down"></div>
+          </div>
+          <div class="contain">
+            <div class="up"></div>
+            <div class="down"></div>
+          </div>
+          <div class="contain">
+            <div class="up"></div>
+            <div class="down"></div>
+          </div>
+          <div class="contain">
+            <div class="up"></div>
+            <div class="down"></div>
+          </div>
+        </div>
+        <div class="moon">
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+          <div class="moon-shadow"></div>
+        </div>
+      </div>
+
+      <div class="penguin">
+        <div class="dialogue">Hello. My name is Peng</div>
+        <div class="penguin-bottom">
+          <div class="right-hand"></div>
+          <div class="left-hand"></div>
+          <div class="right-feet"></div>
+          <div class="left-feet"></div>
+        </div>
+        <div class="penguin-top">
+          <div class="right-cheek"></div>
+          <div class="left-cheek"></div>
+          <div class="belly"></div>
+          <div class="right-eye">
+            <div class="sparkle"></div>
+          </div>
+          <div class="left-eye">
+            <div class="sparkle"></div>
+          </div>
+          <div class="blush-right"></div>
+          <div class="blush-left"></div>
+          <div class="beak-top"></div>
+          <div class="beak-bottom"></div>
+        </div>
+    </div>
+    <div class="penguin-shadow-container">
+      <div class="penguin-shadow">
+        <div class="penguin-top-shadow"></div>
+        <div class="penguin-bottom-shadow">
+          <div class="right-hand-shadow"></div>
+          <div class="left-hand-shadow"></div>
+          <div class="right-feet-shadow"></div>
+          <div class="left-feet-shadow"></div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="mail-container" id="changer">
+      <div class="mailbox">
+        <div class="mail-outside"></div>
+        <a class="mail-cover" href="javascript:void(0);"
+        onclick="mailupmenu()">
+          <div id="knob"></div>
+        </a>
+        <div class="mail-inside-shadow"></div> 
+        <div class="mail-hanger">
+          <div class="hanger-long"></div>
+          <div class="hanger-short"></div>
+        </div>
+        <div class="mail-stand"></div>
+      </div>
+      <div class="mailbox-shadow-container1">
+        <div class="mailbox-shadow-container2">
+          <div class="mailbox-shadow">
+            <div class="mail-outside-shadow"></div>
+            <a class="mail-cover-shadow"></a>
+            <div class="mail-hanger-shadow">
+              <div class="hanger-long-shadow"></div>
+              <div class="hanger-short-shadow"></div>
+            </div>
+            <div class="mail-stand-shadow"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mail" id="letter-changer">
+        <a class="cover" id="cover-cover" href="javascript:void(0);"
+          onclick="mailupmenulast()"></a>
+        <div class="letter" id="mail-letter">
+          <div class="inner-letter-container">
+              <div class="inner-letter">
+                
+                <p id="lastclone">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui blanditiis voluptatem molestias sequi distinctio, ut minus ratione exercitationem officiis impedit nobis saepe consectetur maxime quidem! Assumenda quis optio neque error.</p>
+                <p>Unang una, 'tong laman ng letter ang natatagalan akong gawin, sa tagal kong nag-iisip, patapos na ako maglaba, napagod na din yung tuta kakahila sa shorts ko, itong unang sentence palang nasulat ko.
+                  Kaya dahil diyan, magkwento nalang muna ako. Graveyard book, super ganda, pero mas maganda pa rin yung nagbigay, oh tawa ka naman, like pala ah. Pero seryoso maganda yung story tsaka yung mga characters
+                   at yung twist sa dulo. Nagbabasa din ako ng ibang mga books lalo na kapag brownout, so bale madami ako nabasa. Baka nagtataka ka, bakit may website? Ayun na nga, medyo nawala yung drive ko para i 
+                   pursue yung maging software developer, nawala din goal ko, pero as a trade, ing pursue ko na maging full stack developer. Sila yung mga gumagawa ng websites, mga design, naghahandle ng kung ano yung
+                   nasa likod ng website, baka sabihin mong screen yung nasa likod ng website. Nakakatuwa din na kahit papano naka adapt din ako agad dito sa pag shift, as long na makapag code ako sa career ko, masaya 
+                   na ako duon. Yung tuta na nabanggit ko, Pako pangalan, ako nagpangalan nun. Tapos sobrang liksi niya, kahit ang bilog na ng tiyan niya kakakain, ang bilis pa din niya sobra tumakbo.
+                
+                </p>
+                <p>Madami din akong mga tinanim, may mga gulay at tapos kamo ang laki nung napa-alaga kong pipino, kaso lanta na yung mga puno nila kaya panibago ulit. Sa totoo lang, halos buong oras ng araw ko puro code lang ako,
+                   lalo na kapag meron akong ing ddebug, ay nako makalimutan ko na maligo dahil sa pagdebug tapos yung bug na inaayos ko, typo ko lang pala, hay apo. Nag wworkout din ako paminsan-minsan, 15 mins workout tapos 3 days pahinga, 
+                   balanced naman noh. Tapos alam mo ba, meron pa yung time na nagwworkout ako sa balkon, nag ppush up ako, tapos yung isang manok ang lapit niya sa akin, nakatitig lang siya nang matagal tapos hindi ako makafocous at tawang 
+                   tawa ako, akala mo kung anong iniisip nung manok. Speaking of manok, 'yang manok na yan, alam mo din ba ulit, tuwing merong pinag-uusapan sila dito o kaya may chismis, grabe saan kaya sila nakakasagap ng chismis may kobid eh.
+                    Yung manok, nasa tabi pa din siya malapit tapos nakikinig siya, nakatingin siya talaga sa nagsasalita hindi siya gumagalaw tapos hanggang matapos duon lang siya. (Kakain lang din muna, at speaking ulit of manok, manok din pala ulam ko ngayon.)
+                </p>
+                <p>Nag-edit din nga pala ako ng music video, isipin mo 'yun subject Philippine History tapos project sayaw. Tiktok daw gagawin, tapos background mga scenery, ay apo, may kobid tapos papasayawin kami sa labas. Ay nako, hindi 
+                  na nga marunong magsayaw, hindi ko pa alam yang tiktok. Buti nalang at pwede mag grupo, so bale nakigrupo ako sa mga taga Palauig ang kaso, kalbo ako nung time na 'yun. Yes, kalbo pero hindi yung walang hairlalu ha, meron 
+                  pero sobrang nipis, pero in fairness ang sarap sa pakiramdam sa ulo nung kalbo ako. So of course noh, nag presenta ako na editor para iwas sayaw, pero sa kasamaang palad, nagsayaw pa din ako. Ngayon ko lang naano na ang hirap 
+                  panoodin yung sarili mo sa video, lalo na kapag ikaw mag-eedit. Ngayon hindi ko naman alam kung  paano i submit yung video at malaki yung size, kaya naisip ko i post sa youtube. Oh yes nasa youtube na ako, ikaw din noh yung sayaw
+                   niyo, pero 'di ko pinanood ha. Buti nalang at hindi ing share ng mga kagrupo yung youtube link kundi baka nasa feeds at tv na ako at hindi nagsusulat ngayon. 
+                </p>
+                <p>Halos wala din akong mga ganung kwento at talagang most of the time code lang talaga ang gawa ko, tapos walis walis para pahinga ang mata. Okay, so rants. Ayaw natin yung teacher na hindi nagkklase pero nagpapagawa, tama 'diba? Isa na yung 
+                  teacher ko na nagpasayaw sa amin, sa buong 1st sem, isang beses lang siya nagcall sa section namin at hindi pa lecture yun. Tapos meron pang 10 mins solo videocall sa kaniya per student, eh? Pero hindi naman mandatory daw, pero graded, like whaaaaaattt?........ 
+                  Binasa mo ng mahaba noh. Alam mo 'yun sarap ma mektus sa liber. Tapos ito nakakatawa, nag ccode ako sa oras na 'yun, gabi, nagpasa ako ng activity ko sa messenger niya, maya maya bigla ***** is calling you, hala na taranta ako. Ay nako alam mo ginawa ko? 
+                  Ing off ko yung wifi ko tapos lumabas ako tapos hindi ko na ginamit yung phone ko nung gabi na 'yun. siya nga pala yung RPH teacher. Now second teacher, subject is Contemporary World. Paano ba, magaling siya 'to eh, nagpa long quiz siya sa amin, no teaching tapos nag search ako ng sagot, 
+                  alam mo nakita ko? Yung mga questions sa quiz na 'yun, halos lahat sila. Oh well kinopya niya sa internet ang tanong, kaya kinopya ko lang din sa net yung sagot. 
+                </p>
+                <p>
+                  "Class sa tuesday ko kayo i meet", pagsapit ng tuesday, "class sa thursday ko kayo i meet", pagsapit ng thursday, "class sa next thursday ko nalang kayo i meet", well hindi na siya nagparamdam after nan. Third teacher, I like this one. Subject is Science Technology 
+                  and society. No more than 4 times siya nag call? Meron yung time na nag klase sa kaniya, nag tawag siya, tapos sumagot yung kaklase ko na tinawag niya, buong klase siya lang yung kausap nung teacher like paulit ulit yung tinatanong nung teacher, si ate Rizza 
+                  nakikinig tawang tawa siya at kawawa yung kaklase ko na tinawag, hindi maka rest. Exam niya, ang content, full research thingy. Nakaka-inis lang kasi, wala na nga modules, ang exam sobrang layong layo sa subject, hello. Meron din yung nag call siya pero hindi naman
+                  niya dapat schedule, nagmadali pa ako naglinis nun para maka klase, pagpasok ko, ang topic buong oras, kausap niya mga kaklase ko, lovelife. Well nag leave ako. Last teacher, subject Web System and Technologies, nag hope ako dito sa subject na 'to kasi web. 1 beses 
+                  lang siya nagpakita, no lecture, no module, pero dapat may output na web system.
+                </p>
+                <p>
+                  Hindi naman ako nagagalit o naiinis sa mga gawa nila, kasi mas nag bebenefit ako kapag hindi sila nagkklase. I can code at code all the time na wala sila, kasi 'yun talaga yung dapat kong pag focus-an, not the subjects. Yes, knowledge is good pero saglitan lang, ginagamit lang sa quizzes at 
+                  exam but not for future endeavors noh. Ang kinaiisan ko lang, is silang mga teacher, nag eexpect sila na dapat sa moment na magsabi sila, kailangan nanduon ka, pero sila okay lang kahit wala. Teacher dapat ang nag iinitiate at nag ttake ng lead at hindi ang student. Tapos kapag ang 
+                  student ang wala sa klase nagagalit sila, pero kapag sila ang wala, ang student naghihintay, kasi online any moment biglang boom noh, student ang nag ssuffer sa actions nila. Meron yung sa exam sa STS, merong essay about technology, ang content ko, nilagay ko na 
+                  ang technology, siya na yung nagpprovide ng knowledge about sa mga subjects ko at hindi ang mga teacher. Ewan ko lang kung ano reaction nung teacher ko nung nabasa niya 'yun. Pero totoo, hindi laging positive ang isulat noh, 'ganun siguro expect nila. Naiinis tuloy ako ngayon, 
+                  sana hindi ganito teachers mo, pero sobrang madami naman ata kayong gawain, nakita ko kasi yung tweet mo nung nakaraan. 
+                </p>
+                <p>The rest of my teachers, so far so good, impressed ako sa actions nila, lalo sa Life and Works of Rizal, yes meron kaming Rizal. I know, walang connection mga subjects sa course pero fault ng education system 'yun. Sa Rizal kahit mahaba yung mga pinapagawa, most of the time essays, 
+                  pero nag eenjoy naman ako magsulat-sulat ganun at isip-isip at kahit na nag rrant ako tungkol sa bakit kailangan pag-aralan si Rizal, eh natutuwa naman ako sa paggawa ng activities kasi masaya mag gawa din ng essays, wag nga lang madami kasi sino ba may gusto nun. 
+                  . Environmental Science subject gusto ko din. Madami ding activities dito pero parang ganun sa Rizal, halos puro essays din. Yung teacher bago lang ata siya kasi 
+                  malumanay siya ganun, pero mas maganda parang strict sana siya ganun para lahat nag rrecite sa subject niya, akala mo kung nag rerecite ako eh. Wala din halos groupings except duon sa web systems at nung nagsayaw. Ikaw, kumusta naman ang teachers at kaklase mo? Baka meron yung hindi gumagalaw ha
+                  , ay nako, sabi sa'yo takutin mo sila 'yan. 
+                </p>
+                <p>Kakatapos ko lang din ubusin yung kape ko, ang sarap pala nung kopiko pero nilalagyan ko pa ng asukal, I need sweets, madalas kasi mahilo ganun eh. Bihira nalang din sumakit yung sa dibdib ko, leeg nalang madalas sumakit, okay naman sa pagtulog, tatlong unan gamit ko, nagtataka ako bakit sumasakit. Ay 
+                  nasabi ko na ba sa'yo na parang born to be chiropractor ako? Alam ko kung paano patunugin yung leeg, hinihila ko pero merong exact position kung paano kasi kapag mali, sasakit leeg mo. Nung una ko 'tong nagawa, fresh na fresh ang pakiramdam ng buong kalamnan ko nung hinila ko yung ulo ko. 
+                  Hindi na din ako nanonood muna ng mga horror movies kasi lalo akong nahihirapan matulog, hirap na ako matulog din muna kaya bawat araw antok na antok ako, pero bawal matulog ng araw, kasi madami ang ............ Dinugtungan mo noh, o hindi.  Mahilig ka pa rin bang matulog sa araw? Nag try ako 
+                  matulog dati ng hapon para kako hanggang madaling araw ako mag solve ng algorithm problems kaso ang hirap matulog, umabot ata ako halos isang oras hindi nakatulog nainis lang ako. 
+                </p>
+
+                <p id="firstclone">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis est voluptatem odio natus sapiente, sit ut itaque ab quae, tenetur commodi eum provident voluptates fuga quod id odit possimus ipsum.</p>
+              </div>
+          </div>
+          <button id="prevbtn">Prev</button>
+          <button id="nextbtn">Next</button>
+        </div>
+      </div>
+   </div>
+   
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,224L80,208C160,192,320,160,480,154.7C640,149,800,171,960,192C1120,213,1280,235,1360,245.3L1440,256L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+    </svg>
+    <svg class="svg-two" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,224L80,208C160,192,320,160,480,154.7C640,149,800,171,960,192C1120,213,1280,235,1360,245.3L1440,256L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+    </svg>
+    <div class="white"></div>
+  </div>
+  <script src="app/js/script.js"></script>
+  </body>
+
+</html>

@@ -1,0 +1,14 @@
+{
+    "workbench.settings.editor": "json",
+    "workbench.settings.openDefaultSettings": true,
+    "code-runner.runInTerminal": true,
+    "liveSassCompile.settings.formats": [
+
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "/dest",
+        }
+    ],
+    "liveServer.settings.port": 5501,
+}
