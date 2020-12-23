@@ -1309,14 +1309,35 @@ img, .merry-text {
     transition: all 2s ease;
   }
   #prevbtn {
-    left: 0;
+    left: -29px;
     bottom: -220px;
     z-index: 11;
+    font-size: 1.9rem;
+    color: rgba(255, 251, 0, 0.7);
   }
   #nextbtn {
-    right: 0;
+    right: -4px;
     bottom: -220px;
     z-index: 11;
+    font-size: 1.9rem;
+    color: rgba(255, 251, 0, 0.7);
+  }
+  .fa-arrow-left, .fa-arrow-right {
+    opacity: 0;
+    -webkit-transition: all 3s 5s ease;
+    transition: all 3s 5s ease;
+  }
+  .button-close {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    display: block;
+    opacity: 0;
+    -webkit-transition: opacity 3s 5s ease;
+    transition: opacity 3s 5s ease;
   }
   .inner-letter,
   .inner-letter-container {
@@ -1340,6 +1361,16 @@ img, .merry-text {
     text-align: justify;
     position: relative !important;
     z-index: 20;
+  }
+  .inner-letter p textarea {
+    resize: none;
+    display: block;
+    width: 96%;
+    height: 100px;
+    border-radius: 10px;
+    background-color: #e4e4e4;
+    padding: 0 5px;
+    font-size: 1rem;
   }
   div.mail *, *::before, *::after {
     position: absolute;
@@ -1454,6 +1485,17 @@ img, .merry-text {
     position: none;
     text-decoration: underline;
   }
+  div.mail-container.first.last .fa-arrow-left,
+  div.mail-container.first.last .fa-arrow-right {
+    opacity: 1;
+    -webkit-transition: all 6s 2s ease;
+    transition: all 6s 2s ease;
+  }
+  div.mail-container.first.last .button-close {
+    opacity: 1;
+    -webkit-transition: opacity 6s 2s ease;
+    transition: opacity 6s 2s ease;
+  }
   div.mail-container.first.last div.mail.last div.letter div.inner-letter-container {
     -webkit-transition: all 5s ease;
     transition: all 5s ease;
@@ -1475,6 +1517,17 @@ img, .merry-text {
     transition: 1s 6s ease;
     -webkit-transform: rotateX(0deg);
             transform: rotateX(0deg);
+  }
+  div.mail-container.first.last div.mail.last .fa-arrow-left,
+  div.mail-container.first.last div.mail.last .fa-arrow-right {
+    opacity: 0;
+    -webkit-transition: all 5s ease;
+    transition: all 5s ease;
+  }
+  div.mail-container.first.last div.mail.last .button-close {
+    opacity: 0;
+    -webkit-transition: opacity 5s ease;
+    transition: opacity 5s ease;
   }
 }
 

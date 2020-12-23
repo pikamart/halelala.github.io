@@ -17,8 +17,6 @@ function letterpageschanger() {
     const nextbtn = document.querySelector("#nextbtn");
     let counter = 1;
     let size = carouselpages[0].clientWidth;
-    pagecarousel.style.transition = "none";
-    pagecarousel.style.transform =  "translateX(" + (-size*counter) + "px)"; 
    
     prevbtn.addEventListener("click", ()=>{
       if (counter <= 0) return;
@@ -44,6 +42,7 @@ function mailupmenulast() {
   if (x.className === "mail-container first"){
     x.className += " last";
   }
+
 }
 
 
